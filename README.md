@@ -1,8 +1,7 @@
 # DLLProxying
 DLL Proxying Tool To Generate The Export Directives For The Linker (C/C++)
 
-![image](https://user-images.githubusercontent.com/74332587/204065978-55c2f969-71e1-4eb4-93e4-0a0350fa251b.png)
-
+![Capture](https://user-images.githubusercontent.com/74332587/204101004-36a41f23-5df3-4cfb-855f-19121a9c572c.PNG)
 
 
 
@@ -19,9 +18,12 @@ sudo pip3 install -r requierments.txt
 ```
 
 # Usage
-1.Run dllProxy.py and add the desired DLL to be proxied as an argument:
+dllProxy.py (DLL) (Original DLL Directory)  
+                                                                                                         
+Examples:                                                                                                                                                   
 ```
-python dllProxy.py example.dll
+python dllProxy.py dpapi.dll SysWOW64     
+python dllProxy.py cscapi.dll System32 
 ```
 2. Copy the output and paste it to your DLL code.
 
