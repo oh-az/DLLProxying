@@ -11,5 +11,5 @@ def parse():
 	pe.parse_data_directories(directories=dirr)
 	allExports = [i.name for i in pe.DIRECTORY_ENTRY_EXPORT.symbols]
 	for export in allExports:
-		print(Fore.GREEN + '#pragma comment(linker, "/export:'+ str(export).replace("b","").replace("'","") + '=\\"C:\\\\Windows\\\\System32\\\\' + str(check.fileName.strip(".dll").split("/")[-1]) + "." + str(export).replace("b","").replace("'","") +'\\"")')
+		print(Fore.GREEN + '#pragma comment(linker, "/export:'+ str(export).replace("b","").replace("'","") + '=\\"C:\\\\Windows\\\\System32\\\\' + str(check.fileName.replace(".dll","").split("/")[-1]) + "." + str(export).replace("b","").replace("'","") +'\\"")')
 	print("\n")
